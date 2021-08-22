@@ -1,0 +1,39 @@
+a {
+	outline: none!important;
+}
+
+.storefront-breadcrumb {
+	display: none;
+}
+
+#content.site-content {
+	margin-top: 50px;
+}
+
+.button {
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.default-section {
+	padding: 50px 0;
+}
+
+.flexbox {
+	display: flex;
+	align-items: center;
+}
+
+.flexbox__column {
+	flex: 1;
+}
+
+.table-row {
+	display: table;
+	table-layout: fixed;
+}
+
+.table-row__column {
+	display: table-cell;
+	vertical-align: middle;
+}

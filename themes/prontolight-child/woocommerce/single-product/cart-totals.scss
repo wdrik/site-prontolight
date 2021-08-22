@@ -1,0 +1,37 @@
+.cart-totals {
+
+
+
+  &__list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  &__item {
+    display: table-row;
+    color: #174063;
+    font-weight: bold;
+    font-size: 13px;
+
+
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+  }
+
+  &__label,
+  &__value {
+    display: table-cell;
+    padding: 7px 0;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  &__value {
+    text-align: right;
+  }
+}

@@ -1,0 +1,267 @@
+# Translation of WordPress - 4.9.x - Administration - Network Admin in Portuguese (Brazil)
+# This file is distributed under the same license as the WordPress - 4.9.x - Administration - Network Admin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress - 4.9.x - Administration - Network Admin\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-07-05 14:37-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: functions/hooks.php:133
+msgid "Shipping phone"
+msgstr ""
+
+#: functions/user-shipping-adresses.php:157
+msgid "Number"
+msgstr "Número"
+
+#: functions/user-shipping-adresses.php:166
+msgid "Apartments."
+msgstr "Complemento."
+
+#: functions/user-shipping-adresses.php:184
+msgid "Save address"
+msgstr "Salvar Endereço"
+
+#: functions/user-shipping-adresses.php:191
+msgid "Cancel"
+msgstr "Voltar"
+
+#: functions/user-shipping-adresses.php:223
+msgid "last addresses"
+msgstr "Últimos Endereços"
+
+#: functions/user-shipping-adresses.php:234
+msgid "Find your address by ZIP code"
+msgstr "Busque seu endereço"
+
+#: functions/user-shipping-adresses.php:245
+msgid "Add a new address"
+msgstr "Adicionar um novo endereço"
+
+#: header-checkout.php:50
+msgid "Secure purchase"
+msgstr "Compra segura"
+
+#: header-checkout.php:60, template-checkout-login.php:16,
+#: template-checkout-login.php:59
+msgid "Login"
+msgstr ""
+
+#: header-checkout.php:71, woocommerce/checkout/form-checkout.php:135
+msgid "Payment"
+msgstr "Pagamento"
+
+#: header-checkout.php:82, woocommerce/checkout/form-checkout.php:175
+msgid "Delivery"
+msgstr "Entrega"
+
+#: header-checkout.php:96
+msgid "Thank you!"
+msgstr "Obrigado!"
+
+#: parts/socauth/socauth.php:29, parts/socauth/socauth.php:35,
+#: parts/socauth/socauth.php:44, parts/socauth/socauth.php:50
+msgid "Login with"
+msgstr "Entrar com"
+
+#: template-checkout-login.php:3
+msgid "Checkout login"
+msgstr ""
+
+#: template-checkout-login.php:33
+msgid "e-mail"
+msgstr ""
+
+#: template-checkout-login.php:46
+msgid "Password"
+msgstr "senha"
+
+#: template-checkout-login.php:53
+msgid "Lost your password?"
+msgstr "Esqueci minha senha"
+
+#: template-checkout-login.php:69, template-checkout-login.php:103
+msgid "Come back"
+msgstr "Voltar"
+
+#: template-checkout-login.php:80
+msgid "Register"
+msgstr "Cadastre-se"
+
+#: template-checkout-login.php:90
+msgid "Not have an account yet?"
+msgstr "Ainda não tem uma conta?"
+
+#: template-checkout-login.php:96
+msgid "Register here!"
+msgstr "Cadastre-se Aqui!"
+
+#: template-checkout.php:3
+msgid "Woocommerce checkout"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:44
+msgid "Identification"
+msgstr "Identificação"
+
+#: woocommerce/checkout/form-checkout.php:50
+msgid "Personal information"
+msgstr "Informações Pessoais"
+
+#: woocommerce/checkout/form-checkout.php:58
+msgid "First name"
+msgstr "Nome"
+
+#: woocommerce/checkout/form-checkout.php:59
+msgid "Enter here your first_name"
+msgstr "Digite o seu nome"
+
+#: woocommerce/checkout/form-checkout.php:68
+msgid "Last name"
+msgstr "Sobrenome"
+
+#: woocommerce/checkout/form-checkout.php:69
+msgid "Enter here your last name"
+msgstr "Digite o seu sobrenome"
+
+#: woocommerce/checkout/form-checkout.php:81
+msgid "E-mail"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:82
+msgid "Enter here your email"
+msgstr "Digite o seu e-mail"
+
+#: woocommerce/checkout/form-checkout.php:91
+msgid "Phone"
+msgstr "Telefone"
+
+#: woocommerce/checkout/form-checkout.php:92,
+#: woocommerce/checkout/form-checkout.php:209
+msgid "Enter your phone"
+msgstr "Digite o seu telefone"
+
+#: woocommerce/checkout/form-checkout.php:103,
+#: woocommerce/checkout/thankyou.php:115, woocommerce/checkout/thankyou.php:226
+msgid "Address"
+msgstr "Endereço"
+
+#: woocommerce/checkout/form-checkout.php:117,
+#: woocommerce/checkout/form-checkout.php:157,
+#: woocommerce/checkout/form-checkout.php:285
+msgid "Continue"
+msgstr "Continuar"
+
+#: woocommerce/checkout/form-checkout.php:143
+msgid "CPF"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:202
+msgid "Let's notify before delivering"
+msgstr "Vamos avisar antes de entregar"
+
+#: woocommerce/checkout/form-checkout.php:208
+msgid "Notify before delivering"
+msgstr "Digite o celular para contato"
+
+#: woocommerce/checkout/form-checkout.php:215
+msgid "Select the date and period to continue the purchase"
+msgstr "Selecione uma data e horário para continuar"
+
+#: woocommerce/checkout/form-checkout.php:244
+msgid "Create an account?"
+msgstr "Nova conta"
+
+#: woocommerce/checkout/place-order.php:14
+msgid "All data is complete"
+msgstr "Todos os dados estão completos"
+
+#: woocommerce/checkout/place-order.php:17
+msgid "Smile"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:26
+msgid "Summary"
+msgstr "Resumo"
+
+#: woocommerce/checkout/review-order.php:73,
+#: woocommerce/checkout/thankyou.php:313
+msgid "Qtd."
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:107
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:170,
+#: woocommerce/checkout/thankyou.php:137, woocommerce/checkout/thankyou.php:257
+msgid "Total"
+msgstr ""
+
+#: woocommerce/checkout/terms.php:47
+msgid "I accept the terms and conditions"
+msgstr "Aceito os termos e condições"
+
+#: woocommerce/checkout/terms.php:61
+msgid "To finish, you must accept the terms and conditions"
+msgstr "Para continuar, você deve aceitar os termos e condições"
+
+#: woocommerce/checkout/thankyou.php:55
+msgid "Purchase completed"
+msgstr "Recebemos seu pedido com sucesso! 😀"
+
+#: woocommerce/checkout/thankyou.php:59
+msgid "Your purchase has been approved!"
+msgstr "Cartão de crédito: Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento. "
+
+#: woocommerce/checkout/thankyou.php:63
+msgid "Your purchase was successful!"
+msgstr "Boleto: Assim que o pagamento for confirmado, você receberá um e-mail para agendar a sua entrega."
+
+#: woocommerce/checkout/thankyou.php:67
+msgid "All purchase information was forwarded to your account and your email."
+msgstr "Pagamento na Entrega: Nosso portador levará a maquininha no momento da entrega."
+
+#: woocommerce/checkout/thankyou.php:77, woocommerce/checkout/thankyou.php:274
+msgid "Back to site"
+msgstr "Voltar ao site"
+
+#: woocommerce/checkout/thankyou.php:84, woocommerce/checkout/thankyou.php:159
+msgid "Purchase details"
+msgstr "Detalhes da compra"
+
+#: woocommerce/checkout/thankyou.php:93, woocommerce/checkout/thankyou.php:168
+msgid "Payment method"
+msgstr "Método de pagamento"
+
+#: woocommerce/checkout/thankyou.php:102, woocommerce/checkout/thankyou.php:180
+msgid "Order number"
+msgstr "N° DO PEDIDO"
+
+#: woocommerce/checkout/thankyou.php:125, woocommerce/checkout/thankyou.php:201
+msgid "Delivery date"
+msgstr "Data da entrega"
+
+#: woocommerce/checkout/thankyou.php:149
+msgid "Show full details"
+msgstr "Ver mais detalhes"
+
+#: woocommerce/checkout/thankyou.php:188
+msgid "Purchase date"
+msgstr "Data da compra"
+
+#: woocommerce/checkout/thankyou.php:212
+msgid "Delivery period"
+msgstr "Período da Entrega"
+
+#: woocommerce/checkout/thankyou.php:282
+msgid "Order items"
+msgstr "Itens do pedido"

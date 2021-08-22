@@ -1,0 +1,367 @@
+.checkout-form {
+
+  &__step-list {
+    counter-reset: checkout-form-step;
+  }
+
+  &__step {
+    counter-increment: checkout-form-step;
+    position: relative;
+
+    &:not(:last-child){
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #ececec;
+    }
+
+    &:before {
+      display: none;
+      @media (min-width: 1160px){
+        display: block;
+      }
+
+      left: -130px;
+      @media (min-width: 1480px){
+        left: -180px;
+      }
+
+      content: counter(checkout-form-step);
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+      text-align: center;
+      border: 1px solid #174063;
+      color: #174063;
+      border-radius: 50%;
+      background: #fff;
+      font-weight: bold;
+      font-size: 40px;
+      top: 0;
+    }
+
+
+    &.is-closed {
+      opacity: 0.3;
+    }
+
+    &.is-closed:before {
+      top: -27px;
+    }
+
+    &.is-complete:before {
+      background: #174063;
+      color: #fff;
+    }
+  }
+
+  &__main {
+
+  }
+
+  &__aside {
+    position: absolute;
+    right: 0;
+    display: none;
+    top: 0;
+
+    @media (min-width: 860px){
+      top: 10px;
+    }
+  }
+
+  .is-complete &__aside {
+    display: block;
+  }
+
+  &__step-header {}
+
+  &__step-title {
+    color: #174063;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .is-closed &__step-title {
+    margin-top: 50px;
+  }
+
+  .is-closed &__step-body {
+    display: none;
+  }
+
+  &__section {
+    margin-bottom: 25px;
+  }
+
+  &__section-title {
+    color: #58595B;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .is-complete &__section-title {
+    color: #CDCDCD;
+  }
+
+  &__btn-edit-step {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    @media (min-width: 860px){
+      width: 67px;
+      height: 67px;
+      margin-top: 13px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &,
+    &:hover {
+      background: #fff;
+      border-color: #CDCDCD;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+      @media (min-width: 860px){
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+
+  .is-complete &__field {
+    padding: 0;
+    border: none;
+  }
+
+  .is-complete &__hide-on-complete {
+    display: none;
+  }
+
+  &__visible-on-complete {
+    display: none;
+  }
+
+  .is-complete &__visible-on-complete {
+    display: block;
+  }
+
+  &__field {
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+    &--md {
+      margin-bottom: 15px;
+    }
+
+    &.error {
+      border-color: #e14c58;
+    }
+
+    #wcbcf-mailsuggest {
+      display: none;
+    }
+  }
+
+  &__field-title {
+    color: #58595B;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    line-height: 1;
+  }
+
+  & &__field-input {
+    font-weight: bold;
+    width: 100%;
+    padding: 0;
+    font-size: 15px;
+
+    &,
+    &:focus {
+      color: #58595B;
+      background: transparent;
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: #B8B8B8;
+      font-weight: 400;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active  {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+  }
+
+  &__field-row {
+    display: flex;
+    margin-left: -7px;
+    margin-right: -7px;
+  }
+
+  &__field-col {
+    width: 50%;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  &__btn-next {
+    padding: 20px 70px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #FD7B16;
+    border-radius: 5px;
+    line-height: 1;
+
+    &:hover {
+      background: #e46200;
+    }
+
+    &.disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+
+  &__terms {
+    padding-top: 15px;
+
+
+    &-row {
+
+      &:not(:last-child){
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__delivery-date {
+    display: flex;
+    flex-wrap: wrap;
+
+    .form-row {
+      display: block;
+      width: calc(50% - 7px);
+      margin: 0!important;
+      border: 1px solid #CDCDCD;
+      border-radius: 5px;
+      padding: 10px 20px;
+
+      &.error {
+        border-color: #e14c58;
+      }
+
+      .orddd_field_note {
+        display: none;
+      }
+
+      .select2-hidden-accessible {
+        cursor: default!important;
+        clip: initial!important;
+        height: auto!important;
+        margin: initial!important;
+        overflow: hidden!important;
+        position: static!important;
+      }
+
+      #time_slot + .select2 {
+        display: none!important;
+      }
+
+      input,
+      select {
+        border: none!important;
+        padding: 0!important;
+        box-shadow: none!important;
+        font-weight: bold;
+        height: 24px!important;
+      }
+
+      #time_slot {
+        width: 80% !important;
+      }
+
+      label {
+        font-size: 14px!important;
+        color: #58595B;
+      }
+
+    }
+
+    p.form-row input.input-text {
+      border: none!important;
+    }
+
+    #e_deliverydate_field {
+      background-image: url("../images/calendar.png");
+      background-repeat: no-repeat;
+      background-position: 90% 20px;
+    }
+
+    #time_slot_field {
+      margin-left: 14px!important;
+      background-image: url("../images/arrow-down.png");
+      background-repeat: no-repeat;
+      background-position: 90% 20px;
+    }
+  }
+
+  &__delivery-date-notice {
+    display: none;
+    width: 100%;
+    margin-bottom: 6px;
+    color: #DA2231;
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  &__delivery-date.error &__delivery-date-notice {
+    display: block;
+  }
+
+  &__place-order {
+
+    @media (min-width: 860px){
+      display: none;
+    }
+  }
+}
+
+.checkout-page .woocommerce-checkout-place-order-btn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 25px 16px;
+  border-radius: 5px;
+}
+

@@ -1,0 +1,262 @@
+# Copyright (C) 2019 prontolight
+# This file is distributed under the same license as the prontolight package.
+msgid ""
+msgstr ""
+"Project-Id-Version: prontolight\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: functions/hooks.php:133
+msgid "Shipping phone"
+msgstr ""
+
+#: functions/user-shipping-adresses.php:157
+msgid "Number"
+msgstr ""
+
+#: functions/user-shipping-adresses.php:166
+msgid "Apartments."
+msgstr ""
+
+#: functions/user-shipping-adresses.php:184
+msgid "Save address"
+msgstr ""
+
+#: functions/user-shipping-adresses.php:191
+msgid "Cancel"
+msgstr ""
+
+#: functions/user-shipping-adresses.php:223
+msgid "last addresses"
+msgstr ""
+
+#: functions/user-shipping-adresses.php:234
+msgid "Find your address by ZIP code"
+msgstr ""
+
+#: functions/user-shipping-adresses.php:245
+msgid "Add a new address"
+msgstr ""
+
+#: header-checkout.php:50
+msgid "Secure purchase"
+msgstr ""
+
+#: header-checkout.php:60, template-checkout-login.php:16, template-checkout-login.php:59
+msgid "Login"
+msgstr ""
+
+#: header-checkout.php:71, woocommerce/checkout/form-checkout.php:135
+msgid "Payment"
+msgstr ""
+
+#: header-checkout.php:82, woocommerce/checkout/form-checkout.php:175
+msgid "Delivery"
+msgstr ""
+
+#: header-checkout.php:96
+msgid "Thank you!"
+msgstr ""
+
+#: parts/socauth/socauth.php:29, parts/socauth/socauth.php:35, parts/socauth/socauth.php:44, parts/socauth/socauth.php:50
+msgid "Login with"
+msgstr ""
+
+#: template-checkout-login.php:3
+msgid "Checkout login"
+msgstr ""
+
+#: template-checkout-login.php:33
+msgid "e-mail"
+msgstr ""
+
+#: template-checkout-login.php:46
+msgid "Password"
+msgstr ""
+
+#: template-checkout-login.php:53
+msgid "Lost your password?"
+msgstr ""
+
+#: template-checkout-login.php:69, template-checkout-login.php:103
+msgid "Come back"
+msgstr ""
+
+#: template-checkout-login.php:80
+msgid "Register"
+msgstr ""
+
+#: template-checkout-login.php:90
+msgid "Not have an account yet?"
+msgstr ""
+
+#: template-checkout-login.php:96
+msgid "Register here!"
+msgstr ""
+
+#: template-checkout.php:3
+msgid "Woocommerce checkout"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:44
+msgid "Identification"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:50
+msgid "Personal information"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:58
+msgid "First name"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:59
+msgid "Enter here your first_name"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:68
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:69
+msgid "Enter here your last name"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:81
+msgid "E-mail"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:82
+msgid "Enter here your email"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:91
+msgid "Phone"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:92, woocommerce/checkout/form-checkout.php:209
+msgid "Enter your phone"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:103, woocommerce/checkout/thankyou.php:115, woocommerce/checkout/thankyou.php:226
+msgid "Address"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:117, woocommerce/checkout/form-checkout.php:157, woocommerce/checkout/form-checkout.php:286
+msgid "Continue"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:143
+msgid "CPF"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:202
+msgid "Let's notify before delivering"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:208
+msgid "Notify before delivering"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:215
+msgid "Select the date and period to continue the purchase"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:244
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/place-order.php:14
+msgid "All data is complete"
+msgstr ""
+
+#: woocommerce/checkout/place-order.php:17
+msgid "Smile"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:26
+msgid "Summary"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:73, woocommerce/checkout/thankyou.php:313
+msgid "Qtd."
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:101
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:170, woocommerce/checkout/thankyou.php:137, woocommerce/checkout/thankyou.php:257
+msgid "Total"
+msgstr ""
+
+#: woocommerce/checkout/terms.php:46
+msgid "I've read and accept the Privacy Policy"
+msgstr ""
+
+#: woocommerce/checkout/terms.php:88
+msgid "I accept the terms and conditions"
+msgstr ""
+
+#: woocommerce/checkout/terms.php:109
+msgid "To finish, you must accept the terms and conditions"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:55
+msgid "Purchase completed"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:59
+msgid "Your purchase has been approved!"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:63
+msgid "Your purchase was successful!"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:67
+msgid "All purchase information was forwarded to your account and your email."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:77, woocommerce/checkout/thankyou.php:274
+msgid "Back to site"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:84, woocommerce/checkout/thankyou.php:159
+msgid "Purchase details"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:93, woocommerce/checkout/thankyou.php:168
+msgid "Payment method"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:102, woocommerce/checkout/thankyou.php:180
+msgid "Order number"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:125, woocommerce/checkout/thankyou.php:201
+msgid "Delivery date"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:149
+msgid "Show full details"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:188
+msgid "Purchase date"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:212
+msgid "Delivery period"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:282
+msgid "Order items"
+msgstr ""
