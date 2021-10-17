@@ -13,6 +13,20 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  $(".fullbanner-home__mobile").owlCarousel({
+    loop: 1,
+    nav: 1,
+    dots: 0,
+    autoplay: 1,
+    mouseDrag: 0,
+    autoplayTimeout: 9000,
+    items: 1,
+    navText: [
+      "<i class='fa fa-chevron-left'></i>",
+      "<i class='fa fa-chevron-right'></i>",
+    ],
+  });
+
   $(".fullbanner-home__slider-intern").owlCarousel({
     loop: 1,
     nav: 1,

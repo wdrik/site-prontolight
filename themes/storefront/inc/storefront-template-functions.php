@@ -1016,55 +1016,48 @@ if ( ! function_exists( 'storefront_homepage_custom_slider' ) ) {
 	 * @return  void
 	 */
 	function storefront_homepage_custom_slider() {
-		echo
-		'<div class="fullbanner-home__mobile">
-			<a style="display: none !important; width: 100%; height: 100%;" href="#"></a>
-		</div>
-	<section class="fullbanner-home">
-		<div class="fullbanner-home__slider owl-carousel owl-theme">
+		echo '<div class="fullbanner-home__mobile owl-carousel owl-theme">';
 
-			<div class="slider-home slider-home--novidade" style=" background-size: cover !Important; background-position: center!important;  background: url(https://site.prontolight.com/wp-content/uploads/2020/12/fullbanner-verao-2.jpg ) no-repeat; !Important">
-				<div class="col-full">
-					<div class="slider-home__container">
-						<div class="slider-home__content">
-							<div class="slider-home__text" >
+    if( have_rows('banner_mobile', 26) ):
+      while( have_rows('banner_mobile', 26) ): the_row();
+        $link = get_sub_field('link');
+        $image = get_sub_field('imagem');
 
+        echo '<a style="background: url('.$image.') no-repeat;" href="'.$link.'"></a>';
+      endwhile;
+    endif;
 
-							<a href="https://prontolight.com/categoria-produto/objetivo/">
+		echo '</div>';
 
-
-								</a>
-
-
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+    echo
+    '<section class="fullbanner-home">
+      <div class="fullbanner-home__slider owl-carousel owl-theme">
+        <div class="slider-home slider-home--novidade" style=" background-size: cover !Important; background-position: center!important;  background: url(https://site.prontolight.com/wp-content/uploads/2020/12/fullbanner-verao-2.jpg ) no-repeat; !Important">
+          <div class="col-full">
+            <div class="slider-home__container">
+              <div class="slider-home__content">
+                <div class="slider-home__text" >
+                  <a href="https://prontolight.com/categoria-produto/objetivo/"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
     		<div class="slider-home slider-home--novidade" style=" background-size: cover !Important; background-position: center!important;  background: url(https://site.prontolight.com/wp-content/uploads/2020/12/programas-de-emagrecimento-3.jpg) no-repeat; !Important">
-				<div class="col-full">
-					<div class="slider-home__container">
-						<div class="slider-home__content">
-							<div class="slider-home__text" >
-
-								<a href="https://prontolight.com/categoria-produto/objetivo/">
-
-
-								</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-		</div>
-	</section>';
+          <div class="col-full">
+            <div class="slider-home__container">
+              <div class="slider-home__content">
+                <div class="slider-home__text" >
+                  <a href="https://prontolight.com/categoria-produto/objetivo/"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>';
 	}
 }
 

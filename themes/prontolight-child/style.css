@@ -331,13 +331,38 @@ Template: storefront
 
 @media only screen and (max-width: 600px) {
   .fullbanner-home__mobile {
-    display: none !important;
+    display: block !important;
     width: 100%;
-    height: 400px !important;
-    background: url("https://prontolight.com/wp-content/uploads/2020/04/banner-prato-solidario-mobile.jpg")
-      no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    margin-top: 18px;
+  }
+
+  .fullbanner-home__mobile a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .fullbanner-home__mobile .owl-item {
+    height: 400px;
+  }
+
+  .fullbanner-home__mobile .owl-prev,
+  .fullbanner-home__mobile .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem !important;
+  }
+
+  .fullbanner-home__mobile .owl-prev {
+    left: 5%;
+  }
+
+  .fullbanner-home__mobile .owl-next {
+    right: 5%;
   }
 
   .whatsapp-mobile {
@@ -1883,6 +1908,7 @@ div.wpcf7-validation-errors {
 .mobile-menu-container span.mobile-menu-header {
   display: block;
   height: 19px;
+
   margin: 16px 0;
 }
 
