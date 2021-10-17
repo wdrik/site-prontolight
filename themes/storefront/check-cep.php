@@ -1,6 +1,6 @@
 <?php
 
-$pcep = str_replace(array('.','-'), array('',''),$_REQUEST['cep']);
+$pcep = str_replace(array('.','-','‑'), array('','',''),trim($_REQUEST['cep']));
 $cep = (int) $pcep;
 
 $grandeSP = array(
@@ -20,13 +20,40 @@ $grandeSP = array(
 
 );
 
+if($cep<999999){
+	echo '<h2 style="color:tomato; margin-bottom:10px; font-size:18px;"><i class="fas fa-check-circle"></i> Informe um CEP válido.</h2>'; 
+	return;
+}
+
+
 foreach ($grandeSP as $key => $value) {
 	if(($cep>=$value[0])&&($cep<=$value[1])){
-		echo '<h2 style="color:#39a01c; margin-bottom:10px;"><i class="fas fa-check-circle"></i> Sim, entregamos na sua região.</h2>'; 
+		echo '<h2 style="color:#39a01c; margin-bottom:10px; font-size:18px;"><i class="fas fa-check-circle"></i> Sim, entregamos na sua região.</h2>'; 
 		echo '<p>Você está na Grande São Paulo.</p>'; 
 		return;
 	}
 }
+
+
+$interioSP = array(
+	array(13000000,13139999),
+	array(13270000,13279999),
+	array(13280000,13280000),
+	array(13290000,13290000),
+	array(13250000,13259999),
+	array(13295000,13295000),
+	array(13200000,13219999)
+);
+
+
+foreach ($interioSP as $key => $value) {
+	if(($cep>=$value[0])&&($cep<=$value[1])){
+		echo '<h2 style="color:#1e4063; margin-bottom:10px; font-size:18px; text-transform:initial;"><i class="fas fa-check-circle"></i> Para região de Campinas as compras são válidas apenas por WhatsApp.<br /><br /><a href="">Clique aqui e veja o cardápio.</a></h2>'; 
+		echo '<p>Você está no interior de São Paulo.</p>'; 
+		return;
+	}
+}
+
 
 
 
@@ -41,9 +68,10 @@ $capitalSP = array(
 
 
 
+
 foreach ($capitalSP as $key => $value) {
 	if(($cep>=$value[0])&&($cep<=$value[1])){
-		echo '<h2 style="color:#39a01c; margin-bottom:10px;"><i class="fas fa-check-circle"></i> Sim, entregamos na sua região.</h2>'; 
+		echo '<h2 style="color:#39a01c; margin-bottom:10px; font-size:18px;"><i class="fas fa-check-circle"></i> Sim, entregamos na sua região.</h2>'; 
 		echo '<p>Você está em São Paulo - Capital.</p>'; 
 		return;
 	}
@@ -51,7 +79,7 @@ foreach ($capitalSP as $key => $value) {
 
 
 
-		echo '<h2 style="color:tomato; margin-bottom:10px;"><i class="fas fa-exclamation-triangle"></i> Não entregamos na sua região ainda.</h2>'; 
+		echo '<h2 style="color:tomato; margin-bottom:10px; font-size:18px;"><i class="fas fa-exclamation-triangle"></i> Não entregamos na sua região ainda.</h2>'; 
 		echo '<p>Digite outro CEP para fazer uma nova pesquisa.</p>'; 
 
 

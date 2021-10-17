@@ -52,6 +52,31 @@ jQuery(document).ready(function ($) {
   });
   /* Sidebar - Novidades ----------------------- Final  */
 
+  /* Mobile Meganu  */
+  $(".mobile-menu-first-item").on("click", function () {
+    var dataNavId = $(this).attr("data-nav-id");
+
+    var selector = ".mobile-menu-second-item--" + dataNavId.toString();
+
+    $(selector).addClass("mobile-menu-second-item--open");
+    $("#iconMenuMobileBack").css({ display: "initial" });
+    $("#iconMenuMobile").css({ display: "none" });
+  });
+
+  $("#iconMenuMobileBack").on("click", function () {
+    $("#iconMenuMobileBack").css({ display: "none" });
+    $("#iconMenuMobile").css({ display: "initial" });
+    $(".mobile-menu-second-item").removeClass("mobile-menu-second-item--open");
+  });
+
+  $(".mobile-menu-second-item a").on("click", function () {
+    $("#toggleEffect").removeClass("is-open");
+    $("#iconMenuMobileBack").css({ display: "none" });
+    $("#iconMenuMobile").css({ display: "initial" }).removeClass("on");
+  });
+
+  /* Mobile Meganu ----------------------- Final  */
+
   $(".btn-more").on("click", function (e) {
     e.preventDefault();
 
@@ -85,4 +110,43 @@ jQuery(document).ready(function ($) {
   //     title.remove();
   //   }
   // });
+
+  jQuery(".woocommerce-checkout-place-order-btn.button.alt").click(function () {
+    jQuery(".sticky-cart__place-order > div.woocommerce-error").remove();
+    setTimeout(function () {
+      jQuery("div.woocommerce-error").prependTo(".sticky-cart__place-order");
+    }, 250);
+
+    console.log("clica finaliza");
+  });
+
+  jQuery(
+    "div.checkout-form__step[data-checkout-step=payment] div button.checkout-form__btn-next"
+  ).click(function (event) {
+    var va = $(
+      "input#payment_method_softwareexpress_alimentacao:checked"
+    ).length;
+
+    if (va == 1) {
+      var tp = $("input[name=tipo_pagamento]:checked").length;
+
+      if (tp < 1) {
+        alert("Por favor, selecione a bandeira do seu Vale Alimentação.");
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    }
+
+    var vr = $("input#payment_method_softwareexpress_refeicao:checked").length;
+
+    if (vr == 1) {
+      var tp = $("input[name=tipo_pagamento]:checked").length;
+
+      if (tp < 1) {
+        alert("Por favor, selecione a bandeira do seu Vale Refeição.");
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    }
+  });
 });

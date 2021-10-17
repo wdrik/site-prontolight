@@ -29,6 +29,13 @@
 
 ?>
 
+<style type="text/css">
+    
+    .xsfsb-deliveryVechileIcon img {display:none !important;}
+
+.xsfsb-progressbarcontent-style3 {    display: none !important;}
+
+</style>
 
 
 </head>

@@ -368,6 +368,8 @@ jQuery(document).ready(function ($) {
 
     $("#toggleEffect").toggleClass("is-open");
     $(this).toggleClass("on");
+
+    $(".mobile-menu-second-item").removeClass("mobile-menu-second-item--open");
   }
 
   $("#iconMenuMobile").on("click", menuToggle);

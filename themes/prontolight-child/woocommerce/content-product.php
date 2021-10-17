@@ -89,6 +89,8 @@ $items = $woocommerce->cart->get_cart();
           </div>
         </a>';
 
+	$cashback = (float) (($product->regular_price/10)/4);
+	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
         echo '<div class="wrapper-filter-icons">';
           $tags = (string)$product->get_attribute( 'filtros' );
 
@@ -270,6 +272,10 @@ $items = $woocommerce->cart->get_cart();
 			// echo '<br><hr>';
 			// echo '$total_days: '.$total_days;
 			// echo '<br><hr>';
+
+	$cashback = (float) (($product->regular_price/10)/4);
+	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
+
 
 			echo '
 			<div class="wrapper-category-product">

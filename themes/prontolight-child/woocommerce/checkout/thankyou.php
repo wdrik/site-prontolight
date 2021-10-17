@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+
+
 <div class="woocommerce-order">
 
 
@@ -28,10 +30,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php if ( $order->has_status( 'failed' ) ) : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed">Infelizmente o seu pedido não pode ser processado, seu banco (ou operadora) não aprovou seu pagamento. Tente sua compra novamente. Entre em contato com nosso suporte pelo WhatsApp ou Chat. Vamos te ajudar :)
+		  <p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed">Infelizmente o seu pedido não pode ser processado, seu banco (ou operadora) não aprovou seu pagamento. Entre em contato com nosso suporte pelo WhatsApp ou Chat. Vamos te ajudar :)
             </p>
-
-			
 
 		<?php else : ?>
 
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <div class="thankyou-page__details-promo">
 
                             <div class="thankyou-page__section-heading">
-                                <?php esc_html_e('Purchase completed','prontolight'); ?>
+                               Informações sobre métodos de pagamentos:
                             </div>
 
 
@@ -110,6 +110,9 @@ value: '<?= (float)$subtotal; ?>'
       height='1' 
     />
     	  
+
+
+
   <!--    <img
       src='https://my.pampanetwork.com/scripts/sale.php?TotalCost=<?= (float)$subtotal; ?>&AccountId=d0efaddf&OrderID=<?= $order->id ?>&ActionCode=sale&CampaignID=82418722&Currency=BRL'
       width='1'
@@ -418,6 +421,7 @@ foreach ( $order->get_items() as $item_id => $item ) {
                     },';
 }
 
+
     $lomadee_items = substr($lomadee_items, 0,-1);
 
   echo '<script type="text/javascript">
@@ -442,6 +446,9 @@ foreach ( $order->get_items() as $item_id => $item ) {
 
 ?>
 
+<!-- Offer Conversion: Pronto Light CPS -->
+<img src="https://adzappy.go2cloud.org/aff_l?offer_id=505&adv_sub=<?=$order->id?>&amount=<?=(float) $subtotal; ?>&adv_sub2=<?=$order->get_payment_method_title()?>" width="1" height="1" />
+<!-- // End Offer Conversion -->
 
 
 </div>

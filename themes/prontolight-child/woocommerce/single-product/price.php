@@ -24,5 +24,8 @@ global $product;
 
 ?>
 <p class="price"><?php echo $product->get_price_html(); ?></p>
-
+<?php
+	$cashback = (float) (($product->regular_price/10)/4);
+	echo '<p>Ganhe R$ '.number_format($cashback,2,",",".").' em Cashback</p>';
+?>
 <?php   echo do_shortcode("[ti_wishlists_addtowishlist]")  ?>

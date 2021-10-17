@@ -14,6 +14,8 @@
 
 <head>
 
+<meta name="facebook-domain-verification" content="f5eis06ueoru1y8g8p8sjeu9rz5gkw" />
+
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -21,12 +23,12 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 
+
+
 <!--FACEBOOK-->
 <meta property="og:title" content=" Cardápio Pronto Light: Delivery de Comida Congelada  " />
 <meta property="og:description" content="1ª marca de Comida Saudável, alimentos 100% naturais. Confira nosso cardápio de comida fitness congelada." />
 <meta property="og:image" content="https://prontolight.com/wp-content/uploads/2020/06/pronto-light-2.png" />
-
-
 
 <?php wp_head();
 /*
@@ -58,6 +60,8 @@ echo '<script type="text/javascript">
 */
 ?>
 
+
+<script src="//api.grumft.com/fp_gft/fpgft_adv.js"></script>
 
 
 
@@ -108,8 +112,20 @@ echo '<script type="text/javascript">
 
       .wrapper-filter-icons .filter-icon { height: 30px !important;}
 
+        a.bt-wa {
+
+        position: fixed;
+    bottom: 63px;
+    right: 13px;
+    z-index: 10;
+    transition: transform .2s;
+    display: block !important; }
+
 
     }
+
+
+     a.bt-wa {display: none;}
 
 
     .page-id-25191 .columns-4.grid { width:70%;
@@ -449,8 +465,24 @@ div.icon-whats {content:"\0000a0";display:inline-block;height:24px;width:24px;li
 
     }
 
+.postid-50710   div.product form.cart {    border-top: 0px !important;
+    border-bottom: 0px !important;}
 
 
+.postid-50710  table td {border-top: 0px solid #2f4046 !important;}
+
+.postid-50710   div.product form.cart {    border-top: 0px !important;
+    border-bottom: 0px !important;}
+
+
+.postid-50732  table td {border-top: 0px solid #2f4046 !important;}
+
+
+.postid-50732   div.product form.cart {    border-top: 0px !important;
+    border-bottom: 0px !important;}
+
+
+.postid-50732 table td {border-top: 0px solid #2f4046 !important;}
 
 /* --------------------------------------------------------------- */
 .wrapper-filter-icons {
@@ -594,6 +626,10 @@ div.popup-cep-entrega > form a:hover{ background:#555; }
 }
 
 @media only screen and (max-width: 768px) {
+
+body{ margin-top:30px !important; max-width:100% !important; }
+  .wp-image-53507 {margin-bottom: 17px;}
+
   li.pa_filtros-item:before {
     left: inherit;
   }
@@ -610,6 +646,11 @@ div.popup-cep-entrega > form a:hover{ background:#555; }
 
   .term-solange iframe {max-width: 100%;}
 
+
+a.convide-um-amigo{ color:#555; display:block; margin-right:initial; margin-bottom:5px; cursor:pointer; text-align:center; }
+a.sera-que-entrega{ color:#555; display:block; margin-left:initial; cursor:pointer;   text-align:center; }
+div.popup-cep-entrega{ top:0%; left:0%; margin-left:0px;  margin-top:0px; max-width:100% !important;  width:100%; height:100%; background:white; box-shadow:0 0 10px rgba(0,0,0,.3); padding:40px 20px 40px 20px;  z-index:99999999 !important;  border-radius:0px; }
+div.popup-cep-entrega > form a{ margin-left:initial !important; margin-top:10px !important; }
 
 
 }
@@ -709,12 +750,8 @@ div.popup-cep-entrega > form a:hover{ background:#555; }
 
 
 
-.sp-header-active .sp-header-span-6 {
-    width: 63% !important;
-    margin-right: 1% !important;
-}
+.page-id-8 .woocommerce-button.button.pay {display: none;}
 
-.user-account {top: 71%;}
 
 .cc-color-override-2104694695.cc-window {    background-color: #fff !important; position: fixed !important;
     bottom: 0px !important;
@@ -732,16 +769,6 @@ div.popup-cep-entrega > form a:hover{ background:#555; }
 
 .cc-close {top: 8px !important; display: none !important;}
 
-/*
-
-#menu-item-12567 a {    background: #ff3800;
-    border: 1px solid;
-    border-radius: 100px;
-    padding: 5px 12px !important;
-    margin-left: 24px !important;
-    color: #fff;}
-
-*/
 
 
 .cc-btn.cc-deny {display: none !important;}
@@ -749,66 +776,129 @@ div.popup-cep-entrega > form a:hover{ background:#555; }
 
 
 .show-in-mobile{ display: none; }
-/*
 
-.bt-modal-whats{ background: transparent;  position: fixed; bottom: 20px; left: 20px; z-index: 999; display: inline-block; cursor: pointer; }
-.bt-modal-whats:hover{ opacity: .9; }
+.aproximadamente { display: none; }
 
-.bt-modal-whats.mobile{ display: none; bottom: 55px;  }
+li.post-173.product .aproximadamente { display: block!important; }
 
-.modal-whats{ width: 400px; height: 290px; position: fixed; bottom:20px; left:20px; z-index: 1001;  background:white url('http://www.casj.com.br/wp-content/themes/casj/img/whatsapp-bg.png') center center no-repeat ; background-size: cover; border-radius: 15px;    overflow: hidden; box-shadow: 2px 2px 10px rgba(0,0,0,.5); display: none; }
+li.post-175.product .aproximadamente { display: block!important; }
 
-.modal-whats .body-box{ padding: 20px;  }
-.modal-whats h2{  background:#2F8C7D url('http://www.casj.com.br/wp-content/themes/casj/img/logo-whatsapp.png') center left no-repeat ; background-size: auto 35px;  display: block; text-align:right !important; padding: 15px 15px; margin-bottom:0px; }
-.modal-whats h2:after{ content: ""; display: block; clear: both;}
-.modal-whats h2 a{  background:rgba(0,0,0,.3); color:#fff; height:28px; width:28px;   display: block; border-radius: 100%; text-align: center; font-size:16px; padding-top: 5px;   float:right; cursor: pointer;}
-.modal-whats h2 a:hover{  background:rgba(0,0,0,.5); }
-.modal-whats p{ margin: 0 0 10px 0;  padding: 10px; background: white; border:1px solid #ddd; box-shadow: 1px 1px 2px rgba(0,0,0,.25); border-radius: 0 10px 10px 10px; font-size: 16px; color:#464646; font-weight: bold;}
+li.post-189.product .aproximadamente { display: block!important; }
 
-.modal-whats textarea{ margin:10px 0 10px 0; padding: 10px; background: white; border:1px solid #eee; width: 100%; box-shadow: 1px 1px 1px rgba(0,0,0,.15); border-radius: 10px 10px 10px 10px; font-size: 16px; color:#333; font-weight: normal; height: 70px; }
+li.post-182.product .aproximadamente { display: block!important; }
 
-.modal-whats .body-box a{ background: #2F8C7D; border-radius: 100%; width: auto; height: auto; padding: 10px 0 0 5px; display: inline-block; width: 50px; height: 50px; text-align: center; float: right; cursor: pointer; }
+li.postid-45788.product .aproximadamente { display: block!important; }
 
-.modal-whats .body-box a:hover{ background: #147263; }
-.modal-whats .body-box a img{ margin-right:0; position:relative; left:7px; }
-*/
+li.postid-198.product .aproximadamente { display: block!important; }
+
+li.postid-191.product .aproximadamente { display: block!important; }
+
+li.postid-196.product .aproximadamente { display: block!important; }
+
+li.postid-192.product .aproximadamente { display: block!important; }
+
+li.postid-13163.product .aproximadamente { display: block!important; }
+
+li.postid-445.product .aproximadamente { display: block!important; }
+
+li.post-448.product .aproximadamente { display: block!important; }
+
+li.post-446.product .aproximadamente { display: block!important; }
+
+li.post-441.product .aproximadamente { display: block!important; }
+
+li.post-34411.product .aproximadamente { display: block!important; }
+
+li.post-214.product .aproximadamente { display: block!important; }
+
+li.post-34415.product .aproximadamente { display: block!important; }
+
+li.postid-438.product .aproximadamente { display: block!important; }
+
+li.postid-435.product .aproximadamente { display: block!important; }
+
+li.postid-432.product .aproximadamente { display: block!important; }
+
+li.postid-34421.product .aproximadamente { display: block!important; }
+
+li.postid-34418.product .aproximadamente { display: block!important; }
+
+li.postid-45752.product .aproximadamente { display: block!important; }
+
+li.post-24191.product .aproximadamente { display: block!important; }
+
+li.post-12494.product .aproximadamente { display: block!important; }
+
+li.postid-24188.product .aproximadamente { display: block!important; }
+
+li.postid-12397.product .aproximadamente { display: block!important; }
+
+li.postid-564.product .aproximadamente { display: block!important; }
+
+li.postid-550.product .aproximadamente { display: block!important; }
+
+li.postid-500.product .aproximadamente { display: block!important; }
+
+li.postid-421.product .aproximadamente { display: block!important; }
+
+li.postid-458.product .aproximadamente { display: block!important; }
+
+li.postid-447.product .aproximadamente { display: block!important; }
+
+li.postid-495.product .aproximadamente { display: block!important; }
+
+li.postid-490.product .aproximadamente { display: block!important; }
+
+li.postid-478.product .aproximadamente { display: block!important; }
+
+li.postid-464.product .aproximadamente { display: block!important; }
+
+li.postid-474.product .aproximadamente { display: block!important; }
+
+li.post-46825.product .aproximadamente { display: block!important; }
+
+li.post-46821.product .aproximadamente { display: block!important; }
+
+li.post-63944 .product--price-sale {display: none;}
+
+li.post-63944 .product--calories {display: none;}
+
+li.post-63944 .product--to-buy div {display: none;}
+
+.xsfsb-progressbarcontent-style3 {    height: 68px !important;}
 
 
-@media (min-width:0px) and (max-width: 900px) {
-/*
-.bt-modal-whats.mobile{ display: inline-block;  position: absolute; bottom: initial; top:55px; right:50px; left:initial; z-index: 999999999999999; display: inline-block; cursor: pointer; }
-.bt-modal-whats.desktop{ display:none; }
-*/
-}
+li#mega-menu-item-12790 a.dashicons-cart.mega-menu-link {display: block!important;
+    cursor: pointer!important;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 2px!important;
+    padding: 6px 6px!important;
+    background-color: #fd7b16!important;
+    border-radius: 6px!important; height: 30px!important;
+    line-height: 19px!important;
+    margin-right: 16px!important;
+    color: #fff!important;}
 
-@media only screen and (max-width: 768px) {
+    span.mobile-menu-header:nth-child(4) {    padding: 6px 6px!important;
+    background-color: #fd7b16!important;
+    border-radius: 6px!important;
+    height: 30px!important;
+    line-height: 19px!important;
 
-
-body.tax-product_cat .storefront-sorting { padding-top:0px !important; }
-nav.gridlist-toggle{ position:initial !important; xwidth:30% !important; }
-
-a.convide-um-amigo{ margin-right:initial;  }
-a.sera-que-entrega{ margin-left:initial;  }
-
-form.woocommerce-ordering select{ display:block !important; xwidth:100% !important; }
-.tax-product_cat .storefront-breadcrumb { top: 220px !important; }
-ul.products { position: relative; left: -1%; padding-top:50px !important;}
+    color: #fff!important;}
 
 
-}
+  #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item a.mega-menu-link:before {display: none!important;}
 
 
-.post-12671 .product--price-sale {display: none;}
-
-.post-12671 .product--calories {display: none;}
-
-.post-12671 .product--to-buy div {display: none;}
 
 </style>
 
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php do_action( 'storefront_before_site' ); ?>
+
 
 <div class="overlay-cep-entrega"> </div>
 
@@ -826,8 +916,6 @@ ul.products { position: relative; left: -1%; padding-top:50px !important;}
     </div>
 </div>
 
-<?php do_action( 'storefront_before_site' ); ?>
-
 <div id="page" class="hfeed site">
 	<?php do_action( 'storefront_before_header' ); ?>
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
@@ -842,8 +930,8 @@ ul.products { position: relative; left: -1%; padding-top:50px !important;}
     height: 36px;
     line-height: 36px; font-size: 12px;
     font-weight: 300;">
-    <!-- <a class=" " href="" style="font-weight: 300;"><span class="TopBarLink__TopBarContentWrapper-x4flhr-1 fvcCyD">Convide um amigo para experimentar Pronto Light e ganhe R$ 20,00</span></a> -->
-    <a class="convide-um-amigo" href="https://prontolight.com/minha-conta/myreferrals/" ><i class="fas fa-bullhorn"></i> Convide um amigo para experimentar Pronto Light e ganhe R$ 20,00</a>
+        <!-- <a class=" " href="" style="font-weight: 300;"><span class="TopBarLink__TopBarContentWrapper-x4flhr-1 fvcCyD">Convide um amigo para experimentar Pronto Light e ganhe R$ 20,00</span></a> -->
+    <a class="convide-um-amigo" href="https://prontolight.com/minha-conta/myreferrals/" ><i class="fas fa-bullhorn"></i> Quero ganhar <span style="color: #E45711;">R$ 20,00 de desconto!</span></a>
     <a class="sera-que-entrega" onclick="jQuery('.overlay-cep-entrega,.popup-cep-entrega').fadeIn(500);"><i class="fas fa-map-marker-alt"></i> Será que entrega?</a>
 
     </div>
@@ -866,7 +954,7 @@ ul.products { position: relative; left: -1%; padding-top:50px !important;}
 		 */
 		do_action( 'storefront_header' ); ?>
 
-		<div class="user-account">
+		<div class="user-account" style="top: 71%;">
 			<a href="<?= get_site_url(); ?>/minha-conta">
 				<i class="far fa-user"></i>
 				<?php if ( !is_user_logged_in() ): ?>
@@ -883,15 +971,16 @@ echo '' . $current_user->display_name . "\n";
 		</div>
 
     <div class="clip-whats">
-      <a href="https://web.whatsapp.com/send?phone=5511985295823&" target="_blank">
+      <a href="https://web.whatsapp.com/send?phone=5511985295823" target="_blank">
         <img src="<?= wp_upload_dir()['baseurl']?>/2018/12/prontolight_clipewhatsapp.png" alt="Whatsapp">
-        <div class="clip-whats__number">(11)98529.5823</div>
+        <div class="clip-whats__number">11 98529.5823</div>
       </a>
     </div>
 
-
-
   </header><!-- #masthead -->
+
+  <?php global $woocommerce ?>
+
 
 
   <div class="TopBarLink__TopBarWrapper-x4flhr-0 kHaKCr" style="
@@ -902,22 +991,34 @@ echo '' . $current_user->display_name . "\n";
       position: fixed;
       z-index: 29;
       width: 100%;
-      height: 36px;
-      line-height: 36px;
-      font-size: 12px;">
+      max-width: 100%;
+      height: auto;
+      line-height: 1x;
+      font-size: 12px;
+      padding:5px;">
+      <!--
       <a href="https://prontolight.com/minha-conta/myreferrals/" style="font-weight: 300;">
         <span class="TopBarLink__TopBarContentWrapper-x4flhr-1 fvcCyD">Convide um amigo para experimentar Pronto Light e ganhe R$ 20,00</span>
       </a>
+      -->
+	<a class="convide-um-amigo" href="https://prontolight.com/minha-conta/myreferrals/" ><i class="fas fa-bullhorn"></i> Quero ganhar <span style="color: #E45711;">R$ 20,00 de desconto!</span></a>
+	<a class="sera-que-entrega" onclick="jQuery('.overlay-cep-entrega,.popup-cep-entrega').fadeIn(500);"><i class="fas fa-map-marker-alt"></i> Será que entrega?</a>
     </div>
 
-  <header id="headerMobile" class="site-header--mobile">
-
+  <header id="headerMobile" class="site-header--mobile" style="top:50px;">
     <div class="icon-menu">
       <div id="iconMenuMobile">
         <div class="menu-line menu-line__top"></div>
         <div class="menu-line menu-line__center"></div>
         <div class="menu-line menu-line__bottom"></div>
       </div>
+
+      <div id="iconMenuMobileBack">
+        <img
+          src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/arrow_back_ios_new_black_24dp.svg')?>"
+        >
+      </div>
+
 
       <a id="openSearchForm" href="#">
         <i class="fas fa-search"></i>
@@ -940,7 +1041,6 @@ echo '' . $current_user->display_name . "\n";
           <span class="woocommerce-cart-tab__contents count"><?= wp_kses_data( WC()->cart->get_cart_contents_count() );?></span>
         </a>
       </div>
-
     </div>
 
     <div class="search-form--custom">
@@ -950,12 +1050,79 @@ echo '' . $current_user->display_name . "\n";
     </div>
 
     <nav id="toggleEffect" class="main-menu">
-      <?php wp_nav_menu(array('menu' => 'header')); ?>
+      <?php
+        $menuLocations = get_nav_menu_locations();
+        $navbar_items = wp_get_nav_menu_items($menuLocations['primary']);
+        $child_items = [];
+
+        // pull all child menu items into separate object
+        foreach ($navbar_items as $key => $item) {
+          if ($item->menu_item_parent) {
+            array_push($child_items, $item);
+            unset($navbar_items[$key]);
+          }
+        }
+
+        // push child items into their parent item in the original object
+        foreach ($navbar_items as $item) {
+          foreach ($child_items as $key => $child) {
+            if ($child->menu_item_parent == $item->post_name) {
+              if (!$item->child_items) $item->child_items = [];
+
+              array_push($item->child_items, $child);
+              unset($child_items[$key]);
+            }
+          }
+        }
+
+        echo '<div class="mobile-menu-container">';
+          foreach ( $navbar_items as $navItem ) {
+            echo
+            '<span class="mobile-menu-header">
+              <a href="'.$navItem->url.'">'.$navItem->title.'</a>
+            </span>';
+
+            foreach ( $child_items as $navItemChildren ) {
+              if($navItem->ID == $navItemChildren->menu_item_parent) {
+                echo '
+                  <div class="mobile-menu-first-item" data-nav-id="'.$navItemChildren->ID.'">
+                    <span>'.$navItemChildren->title.'</span>
+
+                    <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/chevron_right_black_24dp.svg').'" >
+                  </div>
+                ';
+
+                echo '<div class="mobile-menu-second-item mobile-menu-second-item--'.$navItemChildren->ID.'">';
+                  foreach ( $child_items as $subNavItemChildren ) {
+                    if($navItemChildren->ID == $subNavItemChildren->menu_item_parent) {
+                      // var_dump($subNavItemChildren);
+
+                      echo '
+                        <a href="'.$subNavItemChildren->url.'">
+                          <span>'.$subNavItemChildren->title.'</span>
+
+                          <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/chevron_right_black_24dp.svg').'" >
+                        </a>
+                      ';
+                    }
+                  }
+                echo '</div>';
+              }
+            }
+          }
+
+          echo '
+            <a class="mega-menu-link--the-new" href="http://google.com" tabindex="0">
+              <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/logo-The-New.png').'" class="mega-menu-item--the-new-img">
+            </a>';
+
+        echo '</div>';
+      ?>
     </nav>
   </header>
 
   <div class="clip-news">
-    <span class="clip-news__span">Destaques</span>
+    <span class="clip-news__span">Ofertas</span>
   </div>
 
   <div class="clip-news-content">
@@ -1004,14 +1171,14 @@ echo '' . $current_user->display_name . "\n";
               <div class="product--to-buy-left">';
                 if($product->sale_price !== "") {
                   echo
-                    '<p class="product--price product--price-with-discont">
+                    '<p class="product--price">
                       <span class="monetary">R$</span>'.number_format($product->sale_price, 2,",",".").'
                     </p>';
                 };
 
-              echo
-                '<p class="product--price">
-                  <span class="monetary">R$</span>'.number_format($product->regular_price, 2,",",".").'
+                if((bool)$product->sale_price) echo '<p class="product--price product--price-with-discont">';
+                if(!(bool)$product->sale_price) echo '<p class="product--price">';
+                echo '<span class="monetary">R$</span>'.number_format($product->regular_price, 2,",",".").'
                 </p>
               </div>
 
@@ -1067,18 +1234,6 @@ echo '' . $current_user->display_name . "\n";
     ?>
   </div>
 
-<!--
-<a href="https://api.whatsapp.com/send?phone=5511994018564" class="bt-modal-whats mobile" onclick="ga('send', 'event', 'whats', 'clique', 'cliquewhats');"><img src="http://www.casj.com.br/wp-content/themes/casj/img/icon-whatsapp.png" width="32" height="32" /></a>
-<a onclick="jQuery('.modal-whats').show(500);" class="bt-modal-whats desktop"><img src="<?php get_template_directory()?>/assets/images/icon-whatsapp.png" width="50" height="50" /></a>
-<div class="modal-whats">
-    <h2><a onclick="jQuery('.modal-whats').hide(200);">x</a></h2>
-    <div class="body-box">
-        <p>Como podemos te ajudar?</p>
-        <textarea placeholder="Digite uma mensagem" onkeyup="generateLinkWA(this.value);"></textarea>
-        <a href="https://api.whatsapp.com/send?phone=555511994018564"  onclick="jQuery('.modal-whats').hide(200);  jQuery('div.body-box textarea').val(''); ga('send', 'event', 'whats', 'clique', 'cliquewhats');" target="_blank"><img src="<?php get_template_directory()?>/assets/images/whatsapp-send-icon.png" width="28" height="28" /></a>
-    </div>
-</div>
--->
 	<?php
 	/**
 	 * Functions hooked in to storefront_before_content

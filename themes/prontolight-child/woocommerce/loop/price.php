@@ -29,8 +29,7 @@ $weight = get_field('field_5b17f00cb8c34', $product->id);
 	<span class="price"><?= $price_html; ?></span>
 
 	<span class="loop-product--calories">
-	
-		
+		kcal <?= $weight["kcal"]; ?>
 	</span>
 
 <?php endif; ?>

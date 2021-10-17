@@ -26,41 +26,52 @@ get_header();
 		.wpcf7-form-control.wpcf7-submit{ margin-top:10px;  }
 
 		@media (max-width: 768px){
+
 			#first-section{ margin-top:90px; }
 		.div-form{ padding:20px; }
 
 		.div-row {}
 		.div-col-50{ width:100%; float:left !important; padding: 0 0 0 0; margin: 0 0 0 0;   }
 		.hide-in-mobile{ display: none !important; }
+
+
+
 		}
 
 	</style>
 
 <div class="div-content" id="first-section">
-	<h1>Seja um Revendedor Exclusivo <strong>Pronto Light na sua cidade</strong></h1>
+	<h1>Seja um Revendedor Exclusivo <strong style="color: #fd7b16;"><br>Pronto Light na sua cidade</strong></h1>
 	<br class="hide-in-mobile"/>
 	<br class="hide-in-mobile"/>
 	<div class="div-row">
 		<div class="div-col-50">
 			<div style="padding:20px;">
-				<img src="/wp-content/uploads/2021/05/images.jpeg" width="100%" />
+				<img src="https://site.prontolight.com/wp-content/uploads/2021/08/captura-de-tela-2017-02-03-as-10-45-54.png" width="100%" />
 			</div>
-		</div>
+		</div>		
 		<div class="div-col-50">
 			<div style="padding:20px;">
-				<h2>MARCA</h2>
-				<p>Marca pioneira e consolidada (14 anos de mercado)</p>
-				<p>Reconhecida e aprovada por nutricionistas</p>
-				<p>Cardápio Saudável</p>
-				<p>Produtos, Low Carb, Detox, Sem Glúten, Fitness, Veganos e Vegetarianos  </p>
+				<h2 style="margin-bottom: 5px;     text-transform: capitalize; color: #fd7b16;">Marca</h2>
+
+				<ul style="margin-left: 20px;">
+					
+					<li>Marca pioneira e consolidada (14 anos de mercado)</li>			
+				<li>Reconhecida e aprovada por nutricionistas</li>			
+				<li>Cardápio Saudável</li>			
+				<li>Produtos, Low Carb, Detox, Sem Glúten, Fitness, Veganos e Vegetarianos  </li>
+
+				</ul>
+
+				
 				<br />
-				<h2>VANTAGENS</h2>
-				<p>Baixo investimento com alta lucratividade</p>
-				<p>Retorno a curto prazo</p>
-				<p>Treinamento</p>
-				<p>Canal exclusivo de vendas</p>
+				<h2 style="margin-bottom: 5px;     text-transform: capitalize; color: #fd7b16;">Vantagens</h2>			
+				<ul style="margin-left: 20px;"><li>Baixo investimento com alta lucratividade</li>			
+				<li>Retorno a curto prazo</li>			
+				<li>Treinamento</li>			
+				<li>Canal exclusivo de vendas</li>	</ul>		
 			</div>
-		</div>
+		</div>		
 	</div>
 
 	<br class="hide-in-mobile"/>
@@ -71,19 +82,21 @@ get_header();
 	<div class="div-row">
 		<div class="div-col-50">
 			<div style="padding:20px;">
-				<h2>MERCADO</h2>
-				<p>Saúde e bem estar são tendências de consumo</p>
-				<p>A busca por alimentação saudável é uma constante crescente</p>
-				<p>Mais de 7 milhões de pessoas moram sozinhas e buscam praticidade na sua alimentação </p>
-				<p>No brasil, 61% dos compradores optam por consumir pratos prontos e/ou congelados</p>
-				<p>34% dos consumidores brasileiros dispõem de pouco tempo porque levam uma vida corrida</p>
+				<h2 style="margin-bottom: 5px;     text-transform: capitalize; color: #fd7b16;">Mercado</h2>
+				<ul style="margin-left: 20px;">
+				<li>Saúde e bem estar são tendências de consumo</li>			
+				<li>A busca por alimentação saudável é uma constante crescente</li>			
+				<li>Mais de 7 milhões de pessoas moram sozinhas e buscam praticidade na sua alimentação </li>			
+				<li>No brasil, 61% dos compradores optam por consumir pratos prontos e/ou congelados</li>
+				<li>34% dos consumidores brasileiros dispõem de pouco tempo porque levam uma vida corrida</li>
+				</ul>	
 			</div>
-		</div>
+		</div>		
 		<div class="div-col-50">
 			<div style="padding:20px;">
 				<img src="/wp-content/uploads/2021/05/IMG_1724.jpg" width="100%" />
 			</div>
-		</div>
+		</div>		
 	</div>
 
 </div>
@@ -94,7 +107,7 @@ get_header();
 		<h2>É nesse mercado gigantesco que a <br class="hide-in-mobile"/><strong>Pronto Light atua</strong></h2>
 		<p>Preencha o formulário, entraremos em contato!</p>
 		<div style="max-width: 400px; margin:0 auto;"><?php echo do_shortcode('[contact-form-7 id="12679" title="Formulario revendedores"]')?></div>
-	</div>
+	</div>		
 </div>
 
 

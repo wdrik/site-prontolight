@@ -178,14 +178,14 @@
         // Click to copy
         $('.gens-ctc').on('click', function () {
             var that = this;
-            var text = $(this).text();
+            var text = $(this).html();
             var copied = $(this).data('text');
             var raf_link = $(this).parent().find('strong').text();
             var copied;
             gensCopyText(raf_link);
             $(this).text(copied);
             setTimeout(function () {
-                $(that).text(text);
+                $(that).html(text);
             }, 1500);
         });
 

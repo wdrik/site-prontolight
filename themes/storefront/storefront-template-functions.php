@@ -1057,7 +1057,7 @@ if ( ! function_exists( 'storefront_homepage_custom_features_home' ) ) {
 					<div class="table-row">
 						<div class="table-row__column features-home__column">
 						<img src="wp-content/themes/prontolight-child/assets/images/3xs-juros.png">
-						<p class="text-bold text-italic">no cartão para compras acima de R$3000</p>
+						<p class="text-bold text-italic">no cartão para compras acima de R$300</p>
 						</div>
 						<div class="table-row__column features-home__column">
 						<img src="wp-content/themes/prontolight-child/assets/images/entrega-rapida.png">

@@ -8,6 +8,7 @@
  */
 
 ?>
+
 		</div><!-- .col-full -->
 	</div><!-- #content -->
 
@@ -124,6 +125,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="col-full">
+
 			<?php
 			/**
 			 * Functions hooked in to storefront_footer action
@@ -132,11 +134,17 @@
 			 * @hooked storefront_credit         - 20
 			 */
 			do_action( 'storefront_footer' ); ?>
+
 		</div><!-- .col-full -->
 
 		<a class="logo-footer--sinnapse" href="http://sinnapse.com" target="_blank" title="agencia de marketing digital sp" alt="agencia de marketing digital sp">
 			<img src="<?= wp_upload_dir()["baseurl"] ?>/2018/11/logo-sinnapse-white.png" alt="agencia de marketing digital sp">
 		</a>
+
+
+
+    <a href="https://api.whatsapp.com/send?phone=5511985295823" target="_blank" class="bt-wa"><img src="https://prontolight.com/whatsapp-logo.webp" width="48px" alt="WhatsApp" title="WhatsApp" data-done="Loaded"></a>
+
 
 		<div class="product-added">
 			Produto Selecionado!
@@ -148,6 +156,7 @@
 	</footer><!-- #colophon -->
 
 	<?php do_action( 'storefront_after_footer' ); ?>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
@@ -160,22 +169,27 @@
 
 
 <style type="text/css">
+
+
+
 .payment_box.payment_method_ipag-gateway_boleto h2 {
-  font-size: 16px!important;
-  text-transform: none!important;
-  font-weight: 400!important;
+    font-size: 16px!important;
+    text-transform: none!important;
+    font-weight: 400!important;
 }
 
-.payment_box.payment_method_ipag-gateway_boleto h2 strong {
-  color: #e46200 !important;
+.payment_box.payment_method_ipag-gateway_boleto h2 strong { color: #e46200 !important;
+
 }
+
+
 .thankyou-page__purchase-successful {font-size: 31px !important;}
 
 .payment-methods__header-icon {
-  width: 72%;
-}
-</style>
+    width: 72%; }
 
+
+</style>
 
 <!--
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -192,32 +206,45 @@
 </script>
 -->
 <script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery('a.submit-cep').click(function(){
-		  jQuery(this).html('<i class="fas fa-redo fa-spin"></i> pesquisando').addClass('disabled');
-      jQuery.ajax({
-          url : "/wp-content/themes/storefront/check-cep.php",
-          type : 'post',
-          data : {
-              cep :jQuery('#test-cep').val()
-          },
-          beforeSend : function(){}
-      })
-      .done(function(msg){
-        jQuery("#response-test-cep").html(msg);
-        jQuery(".submit-cep").html('Verificar');
-      })
-      .fail(function(jqXHR, textStatus, msg){
-        alert('Erro ao pesquisar CEP!');
-      });
-    });
-  });
 
-  function generateLinkWA(v){
-    var linkSrc = 'https://api.whatsapp.com/send?phone=5511994018564&text='+encodeURIComponent(v);
-    jQuery('div.body-box a').attr('href',linkSrc);
-  }
+	jQuery(document).ready(function(){
+
+		jQuery('a.submit-cep').click(function(){
+
+		jQuery(this).html('<i class="fas fa-redo fa-spin"></i> pesquisando').addClass('disabled');
+
+		jQuery.ajax({
+		     url : "/wp-content/themes/storefront/check-cep.php",
+		     type : 'post',
+		     data : {
+		        cep :jQuery('#test-cep').val()
+		     },
+		     beforeSend : function(){
+
+		     }
+		})
+		.done(function(msg){
+		     jQuery("#response-test-cep").html(msg);
+		     jQuery(".submit-cep").html('Verificar');
+
+		})
+		.fail(function(jqXHR, textStatus, msg){
+		     alert('Erro ao pesquisar CEP!');
+		});
+
+		});
+
+	});
+
+    function generateLinkWA(v){
+
+        var linkSrc = 'https://api.whatsapp.com/send?phone=5511994018564&text='+encodeURIComponent(v);
+        jQuery('div.body-box a').attr('href',linkSrc);
+
+    }
+
 </script>
+
 
 <?php
 

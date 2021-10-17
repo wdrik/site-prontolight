@@ -30,7 +30,7 @@ if ( is_product_category() ){
 	// get the image URL
 	$image = wp_get_attachment_url( $thumbnail_id );
 
-	echo
+	echo 
 		"<div style='background: url(".$image.") no-repeat;' class='banner-category'>
 			<div>
 				<h3 class='banner-category__title'>

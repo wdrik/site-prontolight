@@ -69,3 +69,31 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  */
 
 
+
+add_filter( 'woocommerce_package_rates', 'wc_restrict_sales_by_postcode', 10, 2 );
+function wc_restrict_sales_by_postcode( $rates, $package ) {
+  $cep = WC()->customer->get_shipping_postcode();
+  $cep = preg_replace( "/[^0-9]/", "",$cep );
+
+  $blockCep = array('07629770','08180250','07851040','08290220','08270530','08295550','08030440','08270530','08295550');
+
+if (in_array($cep,$blockCep)) {
+  $rates = array();
+}
+    return $rates;
+
+}
+
+
+function add_last_nav_item($items) {
+  return $items .= '
+    <li
+      class="mega-menu-item mega-menu-item--the-new mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-to-right"
+    >
+      <a class="mega-menu-link--the-new" href="http://google.com" tabindex="0">
+        <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/logo-The-New.png').'" class="mega-menu-item--the-new-img">
+      </a>
+    </li>';
+}
+add_filter('wp_nav_menu_items','add_last_nav_item');
+

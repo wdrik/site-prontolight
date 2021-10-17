@@ -327,7 +327,7 @@ echo '<section  class="products-tabs-home program-tabs-home default-section">';
 
             echo
               '</div>
-                <a
+                <a href="/prontolight/dev/categoria-produto/pratos-e-sopas/?add-to-cart='.$product->id.'"
                   class="button button--reverse product_type_simple add_to_cart_button ajax_add_to_cart"
                   data-quantity="1"
                   data-product_id="'.$product->id.'"

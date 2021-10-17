@@ -189,7 +189,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<tr class="order-total">
 			<th><?php _e( 'Total', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php 
+			wc_cart_totals_order_total_html(); 
+
+			    global $woocommerce;  
+			    $total = $woocommerce->cart->get_cart_total();
+				
+			    $trim = (string) trim(strip_tags($total));
+			    $v = preg_replace("/[Az-zA|#]/","",$trim);
+			    $v = (float) str_replace(array('&82;&36;','.',','),array('','','.'),$v);
+			    	$cashback = (float) (($v/10)/4);
+
+				echo '<p style="font-size:12px;">Ganhe R$ '.number_format($cashback,2,',','.').' em cashback</p>';
+			
+			?></td>
     </tr>
 
     <?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>

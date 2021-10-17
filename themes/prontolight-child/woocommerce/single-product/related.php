@@ -80,7 +80,13 @@ if ( $related_products ) : ?>
 
 						echo
 							'<div class="item">
-								<a class="img-custom--link" href="'.get_permalink($product->id).'">
+							';
+							
+								$cashback = (float) (($product->regular_price/10)/4);
+	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff; z-index:100;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
+
+
+								echo '<a class="img-custom--link" href="'.get_permalink($product->id).'">
 									<img class=""
 										src="'.get_the_post_thumbnail_url($product->id, 'post-thumbnail').'"
 										alt="'.get_the_title($product->id).'">
@@ -109,10 +115,10 @@ if ( $related_products ) : ?>
 										'<p class="product--price">
 											<span class="monetary">R$</span>'.number_format($product->regular_price, 2,",",".").'
 										</p>
-                  </div>
+                  </div>';
 
 
-                  <a data-tag-id="'.$product->id.'"
+                  echo '<a data-tag-id="'.$product->id.'"
                     class="button add-itens-on-cart product_type_simple cursor-pointer"
                     data-product_id="'.$product->id.'">
                     Eu quero
@@ -145,11 +151,15 @@ if ( $related_products ) : ?>
                     }
                   }
 
+
+
               echo '
                   <input type="number" value="'.$qty.'" class="'.$product->id.' counter-input">
                   <a data-tag-id="'.$product->id.'" class="add-item cursor-pointer">+</a>
                 </div>
 							</div>';
+
+
 					}
 
 					if ($product->get_type() === 'menu_product') {
@@ -178,6 +188,11 @@ if ( $related_products ) : ?>
 							$days 					= get_field('field_5b10f177525ce', $product->id);
 							$total_days 		= (int)count($days['days']);
 						}
+
+
+
+
+
 
 						foreach ($days['days'] as &$day) {
 							foreach ($day['breakfast'] as &$breakfast) {
@@ -214,7 +229,12 @@ if ( $related_products ) : ?>
 						$calories_per_day = $total_calories / $total_days;
 
 						echo
-						'<div class="item">
+						'<div class="item">';
+						
+							$cashback = (float) (($product->regular_price/10)/4);
+	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff; z-index:10;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
+
+							echo '
 							<a class="img-custom--link" href="'. get_permalink($product->id).'">
 								<img class=""
 									src="'.get_the_post_thumbnail_url($product->id, 'post-thumbnail').'"

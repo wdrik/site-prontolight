@@ -28,7 +28,9 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 <!-- <p><?php //_e( "Your order is on-hold until we confirm payment has been received. Your order details are shown below for your reference:", 'woocommerce' ); ?></p> -->
 <p>Obrigado por comprar na Pronto Light, nós recebemos seu pedido com sucesso.</p>
 <p>Cartão de crédito: Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.</p>
+<p>Vale Alimentação / Refeição: Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.</p>
 <p>Boleto: Assim que o pagamento for confirmado, você receberá um e-mail para agendar a sua entrega.</p>
+<p>Pix: Assim que o pagamento for confirmado, você receberá um e-mail para agendar a sua entrega.</p>
 <p>Pagamento na Entrega: Nosso portador levará a maquininha no momento da entrega.</p>
 
 
