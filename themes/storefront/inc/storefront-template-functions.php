@@ -1031,32 +1031,26 @@ if ( ! function_exists( 'storefront_homepage_custom_slider' ) ) {
 
     echo
     '<section class="fullbanner-home">
-      <div class="fullbanner-home__slider owl-carousel owl-theme">
-        <div class="slider-home slider-home--novidade" style=" background-size: cover !Important; background-position: center!important;  background: url(https://site.prontolight.com/wp-content/uploads/2020/12/fullbanner-verao-2.jpg ) no-repeat; !Important">
-          <div class="col-full">
-            <div class="slider-home__container">
-              <div class="slider-home__content">
-                <div class="slider-home__text" >
-                  <a href="https://prontolight.com/categoria-produto/objetivo/"></a>
+      <div class="fullbanner-home__slider owl-carousel owl-theme">';
+        if( have_rows('banner_desktop', 26) ):
+          while( have_rows('banner_desktop', 26) ): the_row();
+            $link = get_sub_field('link');
+            $image = get_sub_field('imagem');
+
+            echo '<div class="slider-home slider-home--novidade" style=" background-size: cover !important; background-position: center !important;  background: url('.$image.') no-repeat;">
+              <div class="col-full">
+                <div class="slider-home__container">
+                  <div class="slider-home__content">
+                    <div class="slider-home__text" >
+                      <a href="'.$link.'"></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-
-    		<div class="slider-home slider-home--novidade" style=" background-size: cover !Important; background-position: center!important;  background: url(https://site.prontolight.com/wp-content/uploads/2020/12/programas-de-emagrecimento-3.jpg) no-repeat; !Important">
-          <div class="col-full">
-            <div class="slider-home__container">
-              <div class="slider-home__content">
-                <div class="slider-home__text" >
-                  <a href="https://prontolight.com/categoria-produto/objetivo/"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div>';
+          endwhile;
+        endif;
+      echo '</div>
     </section>';
 	}
 }

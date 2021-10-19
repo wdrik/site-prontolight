@@ -316,7 +316,7 @@ Template: storefront
 }
 
 .fullbanner-home__mobile {
-  display: none;
+  display: none !important;
 }
 
 .whatsapp-mobile {
