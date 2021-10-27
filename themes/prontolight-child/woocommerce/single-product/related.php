@@ -82,7 +82,8 @@ if ( $related_products ) : ?>
 							'<div class="item">
 							';
 							
-								$cashback = (float) (($product->regular_price/10)/4);
+	if($product->sale_price>0){ $valor_produto = $product->sale_price; }else{ $valor_produto = $product->regular_price; }
+	$cashback = (float) (($valor_produto/10)/4);
 	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff; z-index:100;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
 
 
@@ -231,7 +232,8 @@ if ( $related_products ) : ?>
 						echo
 						'<div class="item">';
 						
-							$cashback = (float) (($product->regular_price/10)/4);
+	if($product->sale_price>0){ $valor_produto = $product->sale_price; }else{ $valor_produto = $product->regular_price; }
+	$cashback = (float) (($valor_produto/10)/4);
 	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff; z-index:10;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
 
 							echo '

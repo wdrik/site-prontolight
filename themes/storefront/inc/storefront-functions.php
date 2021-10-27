@@ -125,7 +125,7 @@ function storefront_homepage_content_styles() {
 
 	if ( '' !== $background_image ) {
 		$styles['background-image'] = $background_image;
-	}
+	}	
 
 	$styles = apply_filters( 'storefront_homepage_content_styles', $styles );
 

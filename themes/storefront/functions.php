@@ -90,10 +90,79 @@ function add_last_nav_item($items) {
     <li
       class="mega-menu-item mega-menu-item--the-new mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-to-right"
     >
-      <a class="mega-menu-link--the-new" href="http://google.com" tabindex="0">
-        <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/logo-The-New.png').'" class="mega-menu-item--the-new-img">
+      <a class="mega-menu-link--the-new" href="https://site.prontolight.com/prontocash/" tabindex="0">
+        <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/prontocash_menu.png').'" class="mega-menu-item--the-new-img">
       </a>
     </li>';
 }
 add_filter('wp_nav_menu_items','add_last_nav_item');
 
+
+/**
+ * Frontend validate new customer only coupon code
+ * hook: woocommerce_after_checkout_validation
+ */
+
+add_action('woocommerce_applied_coupon','check_new_customer_coupon', 0);
+
+
+
+function check_new_customer_coupon(){
+    global $woocommerce;
+    // you might change the firstlove to your coupon
+    $new_cust_coupon_code = 'testeprimeiracompra';
+    
+    $has_apply_coupon = false;
+
+    foreach ( WC()->cart->get_coupons() as $code => $coupon ) {
+        if($code == $new_cust_coupon_code) {
+            $has_apply_coupon = true;
+        }
+    }
+
+    if($has_apply_coupon) {
+            
+        if(is_user_logged_in()) {
+            $user_id = get_current_user_id();
+
+            // retrieve all orders
+               $customer_orders = get_posts( array(
+'numberposts' => -1,
+'meta_key' => '_customer_user',
+'meta_value' => get_current_user_id(),
+'post_type' => wc_get_order_types(),
+'post_status' => array_keys( wc_get_order_statuses() ),
+) );
+
+            if(count($customer_orders) > 0) {
+                $has_ordered = false;
+                    
+                $statuses = array('wc-failed', 'wc-cancelled', 'wc-refunded');
+                    
+                // loop thru orders, if the order is not falled into failed, cancelled or refund then it consider valid
+                foreach($customer_orders as $tmp_order) {
+
+                    $order = wc_get_order($tmp_order->ID);
+                    if(!in_array($order->get_status(), $statuses)) {
+                        $has_ordered = true;
+                    }
+                }
+                    
+                // if this customer already ordered, we remove the coupon
+                if($has_ordered == true) {
+                    WC()->cart->remove_coupon( $new_cust_coupon_code );
+                    wc_add_notice( sprintf( "Coupon code: %s is only applicable for new customer." , $new_cust_coupon_code), 'error' );
+                    return false;
+                }
+            } else {
+                // customer has no order, so valid to use this coupon
+                return true;
+            }
+
+        } else {
+            // new user is valid
+            return true;
+        }
+    }
+
+}

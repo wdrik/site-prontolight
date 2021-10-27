@@ -1112,8 +1112,8 @@ echo '' . $current_user->display_name . "\n";
           }
 
           echo '
-            <a class="mega-menu-link--the-new" href="http://google.com" tabindex="0">
-              <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/logo-The-New.png').'" class="mega-menu-item--the-new-img">
+            <a class="mega-menu-link--the-new" href="https://site.prontolight.com/prontocash/" tabindex="0">
+              <img src="'.esc_url(get_stylesheet_directory_uri() . '/assets/images/prontocash_menu.png').'" class="mega-menu-item--the-new-img">
             </a>';
 
         echo '</div>';

@@ -200,7 +200,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			    $v = (float) str_replace(array('&82;&36;','.',','),array('','','.'),$v);
 			    	$cashback = (float) (($v/10)/4);
 
-				echo '<p style="font-size:12px;">Ganhe R$ '.number_format($cashback,2,',','.').' em cashback</p>';
+				echo '<p style="font-size:12px;">Ganhe R$ '.number_format($cashback,2,',','.').' em ProntoCash</p>';
 			
 			?></td>
     </tr>
