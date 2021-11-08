@@ -47,24 +47,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
                             <div class="thankyou-page__order-status">
-                                <strong>Cartão de crédito:</strong> Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.                             
+                                <strong>Cartão de crédito:</strong> Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.
                             </div>
 
                             <div class="thankyou-page__purchase-successful">
-                                <strong> Boleto:</strong>  Assim que o pagamento for confirmado, você receberá um e-mail para agendar a sua entrega.                            
+                                <strong> Boleto:</strong>  Assim que o pagamento for confirmado, você receberá um e-mail para agendar a sua entrega.
                             </div>
 
                             <div class="thankyou-page__purchase-successful">
-                                <strong>Pagamento na Entrega:</strong> Nosso portador levará a maquininha no momento da entrega.                            
+                                <strong>Pagamento na Entrega:</strong> Nosso portador levará a maquininha no momento da entrega.
                             </div>
 
 
                              <div class="thankyou-page__purchase-successful">
-                                <strong>Vale Alimentação / Refeição:</strong> Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.             
+                                <strong>Vale Alimentação / Refeição:</strong> Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.
                             </div>
 
                              <div class="thankyou-page__purchase-successful-description">
-                                <strong>PicPay:</strong> Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.    
+                                <strong>PicPay:</strong> Estamos processando a transação. Você receberá um e-mail com a confirmação do pagamento.
                             </div>
 
                             <?php prontolight_render_print_order($order); ?>
@@ -94,7 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <script>
 fbq('track', 'Purchase', {
 currency: 'BRL',
-value: '<?= (float)$subtotal; ?>'    
+value: '<?= (float)$subtotal; ?>'
 
 });
 </script>
@@ -104,14 +104,11 @@ value: '<?= (float)$subtotal; ?>'
 
 
   <!-- Pixel Integration ClickWise -->
-    <img 
-      src='https://r.clickwise.net/t/82418722/sale/<?= $order->id ?>?total-cost=<?= (float)$subtotal; ?>&currency=BRL' 
-      width='1' 
-      height='1' 
+    <img
+      src='https://r.clickwise.net/t/82418722/sale/<?= $order->id ?>?total-cost=<?= (float)$subtotal; ?>&currency=BRL'
+      width='1'
+      height='1'
     />
-    	  
-
-
 
   <!--    <img
       src='https://my.pampanetwork.com/scripts/sale.php?TotalCost=<?= (float)$subtotal; ?>&AccountId=d0efaddf&OrderID=<?= $order->id ?>&ActionCode=sale&CampaignID=82418722&Currency=BRL'
@@ -119,7 +116,6 @@ value: '<?= (float)$subtotal; ?>'
       height='1'
     />
  End Pixel Integration ClickWise -->
-                            
 
                         </div>
                         <div class="thankyou-page__short-details">
@@ -127,8 +123,22 @@ value: '<?= (float)$subtotal; ?>'
                                 <?php esc_html_e('Purchase details','prontolight'); ?>
                             </div>
 
-
                             <?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
+
+                            <?php
+                              $items = $order->get_items();
+
+                              foreach ( $items as $item ) {
+                                $product_id = $item->get_product_id();
+
+                                if ( has_term( array('Pronto Shop'), 'product_cat', $product_id ) ) {
+                                  update_post_meta( $order->get_id(), 'flag_pronto_express', true );
+
+                                  break;
+                                }
+                              }
+                            ?>
+
                             <?php //do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
 
 
@@ -396,7 +406,7 @@ value: '<?= (float)$subtotal; ?>'
 
 
 
-	<?php endif; 
+	<?php endif;
 
 
 
