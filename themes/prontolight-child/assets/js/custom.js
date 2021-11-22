@@ -72,6 +72,10 @@ jQuery(document).ready(function ($) {
 
     var selector = ".mobile-menu-second-item--" + dataNavId.toString();
 
+    $('#toggleEffect').animate({
+      scrollTop: 0
+    }, 100);
+
     $(selector).addClass("mobile-menu-second-item--open");
     $("#iconMenuMobileBack").css({ display: "initial" });
     $("#iconMenuMobile").css({ display: "none" });

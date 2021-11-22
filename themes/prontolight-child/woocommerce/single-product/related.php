@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $woocommerce;
+global $woocommerce, $product;
 $items_cart = $woocommerce->cart->get_cart();
 
 function getMenuPrice($menu) {
@@ -55,8 +55,14 @@ function getMenuPrice($menu) {
 	}
 }
 
-if ( $related_products ) : ?>
+if(has_term( array('Pronto Shop'), 'product_cat', $product->get_id() )) {
+  wp_reset_postdata();
 
+  return;
+}
+
+
+if ( $related_products ) : ?>
 	<section class="related products">
 
 		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
@@ -81,7 +87,7 @@ if ( $related_products ) : ?>
 						echo
 							'<div class="item">
 							';
-							
+
 	if($product->sale_price>0){ $valor_produto = $product->sale_price; }else{ $valor_produto = $product->regular_price; }
 	$cashback = (float) (($valor_produto/10)/4);
 	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff; z-index:100;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
@@ -231,7 +237,7 @@ if ( $related_products ) : ?>
 
 						echo
 						'<div class="item">';
-						
+
 	if($product->sale_price>0){ $valor_produto = $product->sale_price; }else{ $valor_produto = $product->regular_price; }
 	$cashback = (float) (($valor_produto/10)/4);
 	echo '<div style="position:absolute; top:10px; right:10px; padding-top:19px; line-height:1.3; text-align:center; width:60px; height:60px; overflow:hidden; border-radius:100%; font-size:10px; background:#71BF52; color:#fff; z-index:10;" >R$ '.number_format($cashback,2,",",".").'<br />Cashback</div>';
@@ -425,7 +431,6 @@ if ( $related_products ) : ?>
 		<?php woocommerce_product_loop_end(); ?>
 
 	</section>
-
 <?php endif;
 
 wp_reset_postdata();
